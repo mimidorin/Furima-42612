@@ -49,7 +49,5 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: furima_42612_production
-  username: furima_42612
-  password: <%= ENV["FURIMA_42612_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
