@@ -17,6 +17,8 @@ gem "stimulus-rails"
 # ビュー
 gem "jbuilder"
 
+gem "devise"
+
 # OS依存
 gem "tzinfo-data", platforms: %i[windows jruby]
 
@@ -32,6 +34,11 @@ end
 group :development, :test do
   gem "mysql2", "~> 0.5"
   gem "debug", platforms: %i[mri windows]
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem 'rubocop',  '1.71.2', require: false
+  gem 'rubocop-rails', require: false
 end
 
 # 開発のみ
